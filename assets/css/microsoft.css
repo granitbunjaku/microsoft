@@ -129,6 +129,10 @@ nav a:hover{
     display: none;
 }
 
+.header-content{
+    display: none;
+}
+
 .all-m{
     width: 100%;
 }
@@ -522,16 +526,44 @@ p{
 }
 
 .footer{
-    background-color: #f3f2f3;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #f3f3f3;
+    padding: 20px 70px 20px 70px;
 }
 
 footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-bottom{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.footer-bottom .fillimi{
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom .fillimi i{
+    margin-right: 10px;
+}
+
+.footer-bottom .fundi a{
+    margin-right: 25px;
+}
+
+.footer-bottom .fundi{
+    display: flex;
 }
 
 footer p{
@@ -553,31 +585,6 @@ footer ul li{
 .footer ul li a{
     color: rgb(101, 101, 101);
     text-decoration: none;
-}
-
-.footer .footer-bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 17px 100px 10px 100px;
-    height: 50px;
-}
-
-.footer .footer-bottom .fillimi{
-    align-items: center;
-    display: flex;
-}
-
-.footer .footer-bottom .fillimi a{
-    margin-left: 15px;
-}
-
-.footer .footer-bottom .fundi{
-    display: flex;
-}
-
-.footer .footer-bottom .fundi ul li{
-    margin-left: 25px;
 }
 
 .acc-info{
@@ -953,6 +960,12 @@ footer ul li{
         margin: 0px;
     }
     
+    .slider{
+        display: flex;
+        justify-content: center;
+        height: 0px;
+    }
+    
     .special-offer{
         background-image: url(/assets/images/foto.jfif);
         background-size: cover;
@@ -993,7 +1006,45 @@ footer ul li{
         padding: 30px;
     }
 
-    .special-offer-content h1{
+    .body{
+        position: relative;
+    }
+
+    .platforms{
+        margin-top: 30px;
+    }
+    
+    .slider{
+        margin-top: 100px;
+    }
+
+    .slider .s-elements{
+        margin-top: 10px;
+    }
+
+    .sport-slider .s-elements{
+        margin: 0px;
+    }
+
+    .sport-slider{
+        margin-top: 40px;
+    }
+
+    .header-content{
+        display: flex;
+        position: relative;
+        box-shadow: 0px 1px 2px 0px rgba(219,219,219,1);
+        background-color: white;
+        width: 97%;
+        position: absolute;
+        z-index: 1;
+        bottom: -80px;
+        left: 15px;
+        padding: 30px;
+    }
+
+    .special-offer-content h1,
+    .header-content h1{
         font-size: 24px;
     }
 
@@ -1010,9 +1061,31 @@ footer ul li{
         background-position-x: 100%;
         background-position-y: -10px;
     }
+    
+    .footer{
+        display: flex;
+        flex-direction: column;
+        background-color: #f3f3f3;
+        padding: 20px 70px 20px 20px;
+    }
 
-    .slider{
-        margin-top: 100px;
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fillimi{
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+
+    .fundi{
+        flex-wrap: wrap;
+    }
+
+    .fundi ul li{
+        margin-top: 10px;
     }
 
 }
@@ -1305,6 +1378,40 @@ footer ul li{
     
     .shop-offers{
         grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 540px) {
+    
+    footer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .follow-section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 190px;
+        padding: 0px 20px;
+    }
+
+    .b-top button{
+        background-color: rgb(206, 206, 206);
+        color: black;
+        width: 470px;
+        align-self: center;
+        margin-left: 20px;
+    }
+
+    .follow{
+        display: flex;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin: 65px 0px 15px 0px;
     }
     
 }
