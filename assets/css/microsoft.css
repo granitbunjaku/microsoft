@@ -1265,6 +1265,7 @@ footer ul li{
         background-color: #f3f3f3;
         position: absolute;
         width: 100%;
+        z-index: 2;
     }
     
     .sidebar .listat li{
