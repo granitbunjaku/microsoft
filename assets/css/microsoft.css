@@ -308,7 +308,7 @@ nav .s-2{
 
 .body{
     width: 100%;
-    background-image: url(/assets/images/wallpaper.jfif);
+    background-image: url(/assets/images/1.jfif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -393,9 +393,6 @@ button:hover{
     padding: 0px 10px;
 }
 
-.slider i:nth-child(2){
-    font-size: 11px;
-}
 
 .platforms{
     display: flex;
