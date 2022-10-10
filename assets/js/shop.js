@@ -16,7 +16,7 @@
 
     for(let i = 0; i < Items.length; i++) {
         const product1 = document.createElement("div")
-        product1.setAttribute("class", `product${Items[i]}`)
+        product1.setAttribute("class", `product${i}`)
         
         const productImage = document.createElement("img")
         productImage.src = `${Items[i].image}`
@@ -28,13 +28,13 @@
         productPrice.textContent = `${Items[i].price}`
         
         const addToCart = document.createElement("button")
+        addToCart.textContent = "Add to Cart"
+
         addToCart.addEventListener("click", () => {
             cartProducts.push(Items[i])
             localStorage.setItem("Cart", JSON.stringify(cartProducts))
             convertToCartItem(Items[i])
         })
-
-        addToCart.textContent = "Add to Cart"
         
         product1.appendChild(productImage)
         product1.appendChild(productName)
@@ -63,6 +63,7 @@
 
         const deleteProduct = document.createElement("button")
         deleteProduct.textContent = "Delete Product"
+        
         deleteProduct.addEventListener("click", () => {
             deleteProductt(item.id)
             cartLink[0].setAttribute("title", `${cartProducts.length} products in cart`)
