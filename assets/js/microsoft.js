@@ -67,9 +67,10 @@ let body = document.body;
 login[0].addEventListener("click", () => { loginform[0].style.display = "block"; body.style.overflow = "hidden"})
 wrapLogin[0].addEventListener("click", (e) => { e.stopPropagation() })
 loginform[0].addEventListener("click", () => { loginform[0].style.display = "none"; body.style.overflow = "auto"})
-backToTop[0].addEventListener("click", () => {window.scrollTo(0, 0);})
 
 // GO BACK TO TOP
+
+backToTop[0].addEventListener("click", () => {window.scrollTo(0, 0);})
 
 function scrollFunction() {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -80,6 +81,8 @@ function scrollFunction() {
 }
 
 window.onscroll= () => {scrollFunction()}
+
+// All Microsoft Menu
 
 const allMicrosoft = document.getElementsByClassName("all-microsoft")
 const navMenu = document.getElementsByClassName("menu1")

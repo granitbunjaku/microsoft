@@ -1,7 +1,6 @@
     import Items from "./Items.js"
 
     const cartLink = document.body.getElementsByClassName("show--cart")
-    const cartLink2 = document.body.getElementsByClassName("r-show--cart")
     const cart = document.body.getElementsByClassName("cart")
     const products = document.body.getElementsByClassName("products")
 
@@ -95,6 +94,7 @@
     wrapLogin[0].addEventListener("click", (e) => { e.stopPropagation() })
     loginform[0].addEventListener("click", () => { loginform[0].style.display = "none"; body.style.overflow = "auto"})
 
+    // All Microsoft Menu
     
     const allMicrosoft = document.getElementsByClassName("all-microsoft")
     const navMenu = document.getElementsByClassName("menu1")
