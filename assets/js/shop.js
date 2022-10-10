@@ -5,7 +5,7 @@
     const cart = document.body.getElementsByClassName("cart")
     const products = document.body.getElementsByClassName("products")
 
-
+    
     window.onload = (() => {
         const products = JSON.parse(localStorage.getItem("Cart"))
         for(let i = 0; i<products.length; i++) {

@@ -8,7 +8,7 @@ slider()
 
 function slider() {
     const text = document.getElementsByClassName("text1")
-    const body = document.getElementsByClassName("body")[0]
+    const sliderBody = document.getElementsByClassName("slider-body")[0]
 
     for(let i=0; i<text.length; i++){
         text[i].style.display = "none"
@@ -23,7 +23,7 @@ function slider() {
     if (sliderIndex < 0) sliderIndex=1
 
     text[sliderIndex].style.display = "flex"
-    body.style.backgroundImage = `url('/assets/images/${sliderIndex}.jfif')`
+    sliderBody.style.backgroundImage = `url('/assets/images/${sliderIndex}.jfif')`
 
 
     dots[sliderIndex].classList.replace("ph-circle", "fa-circle")

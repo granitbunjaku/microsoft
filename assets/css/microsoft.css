@@ -312,7 +312,7 @@ nav .s-2{
     display: none;
 }
 
-.body{
+.slider-body{
     width: 100%;
     background-image: url(/assets/images/1.jfif);
     background-size: cover;
@@ -727,7 +727,7 @@ footer ul li{
         margin-left: 20px;
     }
 
-    .body{
+    .slider-body{
         background-image: url(/assets/images/r-wallpaper.jfif);
         height: 588px;
     }
@@ -1035,7 +1035,7 @@ footer ul li{
         padding: 30px;
     }
 
-    .body{
+    .slider-body{
         position: relative;
     }
 
@@ -1083,7 +1083,7 @@ footer ul li{
         display: none;
     }
 
-    .body{
+    .slider-body{
         width: 100%;
         background-image: url(/assets/images/wallpaper.jfif);
         background-size: 1500px;
@@ -1401,7 +1401,7 @@ footer ul li{
         left: 0;
     }
     
-    .body{
+    .slider-body{
         width: 100%;
         background-image: url(/assets/images/wallpaper.jfif);
         background-size: 1200px;
