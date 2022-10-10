@@ -1,7 +1,9 @@
+// SLIDER
+
 let sliderIndex = 0
 let arrows = document.getElementsByClassName("arrow")
 let dots = document.getElementsByClassName("dot")
-let timeouti;
+let sliderTimeout;
 slider()
 
 function slider() {
@@ -25,18 +27,18 @@ function slider() {
 
 
     dots[sliderIndex].classList.replace("ph-circle", "fa-circle")
-    timeouti=setTimeout(intervalFunc, 3000)
+    sliderTimeout=setTimeout(intervalFunc, 3000)
 }
 
 arrows[0].addEventListener("click", () => {
     sliderIndex--
-    clearTimeout(timeouti)
+    clearTimeout(sliderTimeout)
     slider()
 })
 
 arrows[1].addEventListener("click", () => {
     sliderIndex++
-    clearTimeout(timeouti)
+    clearTimeout(sliderTimeout)
     slider()
 })
 
@@ -48,7 +50,40 @@ function intervalFunc() {
 for (let i=0; i<dots.length; i++) {
     dots[i].addEventListener("click", () => {
         sliderIndex=i
-        clearTimeout(timeouti)
+        clearTimeout(sliderTimeout)
         slider()
     })
 }
+
+// LOGIN
+
+let login = document.getElementsByClassName("login")
+let loginform = document.getElementsByClassName("limiter")
+let backToTop = document.getElementsByClassName("b-top")
+let wrapLogin = document.getElementsByClassName("wrap-login100")
+let body = document.body;
+
+
+login[0].addEventListener("click", () => { loginform[0].style.display = "block"; body.style.overflow = "hidden"})
+wrapLogin[0].addEventListener("click", (e) => { e.stopPropagation() })
+loginform[0].addEventListener("click", () => { loginform[0].style.display = "none"; body.style.overflow = "auto"})
+backToTop[0].addEventListener("click", () => {window.scrollTo(0, 0);})
+
+// GO BACK TO TOP
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTop[0].style.display = "block";
+  } else {
+    backToTop[0].style.display = "none";
+  }
+}
+
+window.onscroll= () => {scrollFunction()}
+
+const allMicrosoft = document.getElementsByClassName("all-microsoft")
+const navMenu = document.getElementsByClassName("menu1")
+
+navMenu[0].addEventListener("click", () => {
+    allMicrosoft[0].style.display = allMicrosoft[0].style.display == "none" ? "flex" : "none"; 
+})
